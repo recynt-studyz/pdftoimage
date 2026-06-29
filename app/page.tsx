@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import dynamic from 'next/dynamic'
 import AdBanner from '@/components/AdBanner'
+import ConverterWrapper from '@/components/ConverterWrapper'
 import FAQ from '@/components/FAQ'
 import Footer from '@/components/Footer'
 
@@ -12,15 +12,6 @@ export const metadata: Metadata = {
     canonical: 'https://pdftoimage.app',
   },
 }
-
-const Converter = dynamic(() => import('@/components/Converter'), {
-  ssr: false,
-  loading: () => (
-    <div className="h-48 flex items-center justify-center text-gray-400 text-sm">
-      Loading converter&hellip;
-    </div>
-  ),
-})
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -214,7 +205,7 @@ export default function Home() {
         {/* Converter card */}
         <div className="relative z-10 max-w-3xl mx-auto px-4 pb-16">
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl px-6 pt-4 pb-6">
-            <Converter />
+            <ConverterWrapper />
           </div>
         </div>
       </section>
