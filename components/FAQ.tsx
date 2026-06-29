@@ -43,6 +43,10 @@ const faqs = [
     q: 'Can I verify my PDF is not being uploaded?',
     a: 'Yes, easily. Open your browser\'s DevTools (press F12), click the Network tab, then drop your PDF and click Convert. You will see zero outbound requests to any server during conversion. The only network activity is loading the page itself — after that, everything is local.',
   },
+  {
+    q: 'Can I convert PDF to JPG without uploading to a server?',
+    a: 'Yes — pdftoimage.app converts PDF pages to images entirely in your browser using Mozilla\'s PDF.js library. Your PDF file is never transmitted to any server. Unlike most PDF to JPG converters that upload your document to process it remotely, pdftoimage.app processes everything locally on your device. You can verify this yourself by opening your browser DevTools, clicking the Network tab, and converting a PDF — you will see zero outbound file transfer requests during the entire conversion.',
+  },
 ]
 
 export default function FAQ() {

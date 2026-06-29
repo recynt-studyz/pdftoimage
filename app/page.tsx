@@ -105,6 +105,14 @@ const faqSchema = {
         text: 'Yes. Open DevTools (F12), click the Network tab, then drop your PDF and click Convert. You will see zero outbound requests to any server during conversion.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Can I convert PDF to JPG without uploading to a server?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Yes — pdftoimage.app converts PDF pages to images entirely in your browser using Mozilla's PDF.js library. Your PDF file is never transmitted to any server. Unlike most PDF to JPG converters that upload your document to process it remotely, pdftoimage.app processes everything locally on your device. You can verify this yourself by opening your browser DevTools, clicking the Network tab, and converting a PDF — you will see zero outbound file transfer requests during the entire conversion.",
+      },
+    },
   ],
 }
 
@@ -194,6 +202,9 @@ export default function Home() {
             <p className="mt-3 text-lg text-white/80 max-w-xl mx-auto">
               Convert PDF to JPG, PNG or WebP instantly in your browser. Every page, no upload
               required, and your PDF never leaves your device.
+            </p>
+            <p className="mt-2 text-sm text-white/60 max-w-xl mx-auto">
+              Convert PDF to JPG without uploading — everything stays on your device.
             </p>
           </div>
 
